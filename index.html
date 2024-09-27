@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Cinema</title>
+    <title>Онлайн кинотеатр</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,6 +16,13 @@
                 <img src="img/logo.svg" alt="Logo">
             </a>
             <nav class="nav">
+              <button class="m-menu">
+                <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line y1="0.5" x2="15" y2="0.5" stroke="white"/>
+                  <line y1="4.5" x2="15" y2="4.5" stroke="white"/>
+                  <line y1="8.5" x2="15" y2="8.5" stroke="white"/>
+                  </svg>                  
+              </button>
                 <ul class="menu">
                     <li class="menu-item">
                         <a href="#" class="menu-link">Главная</a>
@@ -66,8 +74,8 @@
                 <!-- /.film-detailes -->
             </div>
             <!-- /.film-info -->
-            <a href="#" class="film-trailer">
-                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a data-fancybox data-youtube="https://youtu.be/6ZfuNTqbHE8?si=SgA6hA_iBGWJx6QR" class="film-trailer" data-width="640" data-height="360">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="50" cy="50" r="50" fill="white"/>
                     <g clip-path="url(#clip0_1_158)">
                     <path d="M43.0758 30.0033C39.3071 27.8416 36.2518 29.6125 36.2518 33.9556V66.0059C36.2518 70.3533 39.3071 72.1219 43.0758 69.9623L71.0893 53.8967C74.8592 51.7342 74.8592 48.2306 71.0893 46.0686L43.0758 30.0033Z" fill="#F20D01"/>
@@ -81,6 +89,7 @@
                     
             </a>
         </div>
+        
         <!-- /.film -->
          <div class="session container">
             <div class="session-date">
@@ -626,13 +635,13 @@
                 <svg width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="active" d="M0.390625 24.5C0.390625 24.5256 0.391608 24.5512 0.393571 24.5767C0.486973 25.7909 0.92738 27.5963 1.97857 29.1283C3.05641 30.6991 4.79938 32 7.39062 32H29.8906C29.9144 32 29.9382 31.9992 29.9619 31.9975C31.2891 31.9027 33.2417 31.3731 34.8862 30.0716C36.5712 28.7381 37.8906 26.6218 37.8906 23.5V14H35.8906V23.5C35.8906 25.9782 34.8767 27.5286 33.645 28.5034C32.3871 29.499 30.86 29.9212 29.8533 30H7.39062C5.58187 30 4.40817 29.1342 3.62768 27.9967C2.83084 26.8354 2.4702 25.4126 2.39062 24.46V14H0.390625V24.5ZM26.8906 1H10.8906C7.57692 1 4.89062 3.68629 4.89062 7V20C4.89062 23.3137 7.57692 26 10.8906 26H26.8906C30.2043 26 32.8906 23.3137 32.8906 20V7C32.8906 3.68629 30.2043 1 26.8906 1Z"/>
                 </svg>
-                <span class="legend-active">Выбрано</span>
+                <span class="legend-text">Выбрано</span>
               </div>
             <div class="legend-booked legend-label">
                 <svg width="39"height="32"viewBox="0 0 39 32"fill="none"xmlns="http://www.w3.org/2000/svg">
                     <path class="booked"d="M0.8125 24.5C0.8125 24.5256 0.813483 24.5512 0.815446 24.5767C0.908848 25.7909 1.34926 27.5963 2.40044 29.1283C3.47829 30.6991 5.22125 32 7.8125 32H30.3125C30.3363 32 30.36 31.9992 30.3837 31.9975C31.711 31.9027 33.6636 31.3731 35.3081 30.0716C36.9931 28.7381 38.3125 26.6218 38.3125 23.5V14H36.3125V23.5C36.3125 25.9782 35.2985 27.5286 34.0669 28.5034C32.8089 29.499 31.2819 29.9212 30.2752 30H7.8125C6.00375 30 4.83004 29.1342 4.04956 27.9967C3.25271 26.8354 2.89207 25.4126 2.8125 24.46V14H0.8125V24.5ZM27.3125 1H11.3125C7.99879 1 5.3125 3.68629 5.3125 7V20C5.3125 23.3137 7.99879 26 11.3125 26H27.3125C30.6262 26 33.3125 23.3137 33.3125 20V7C33.3125 3.68629 30.6262 1 27.3125 1Z"/>
                   </svg>
-                  <span class="legend-booked">Занято</span>
+                  <span class="legend-text">Занято</span>
             </div>
             <!-- /.legend-booked -->
           </div>
@@ -646,6 +655,7 @@
        <a href="#" class="button button-pay">Перейти к оплате</a>
     </div>
     <!-- /.price -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
      <script src="js/scripts.js"></script>
 </body>
 </html>
